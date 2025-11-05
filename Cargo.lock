@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "Quest_1"
+name = "quest_1"
 version = "0.1.0"
