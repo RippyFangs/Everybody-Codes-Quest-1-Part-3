@@ -15,8 +15,8 @@ fn main() {
     let structured_data: Vec<String> = raw_data.lines().map(String::from).collect();
 
     //gives us two vectors, a list of names and a list of commands
-    let names: Vec<&str> = structured_data[0].split(",").collect();
-    let commands: Vec<&str> = structured_data[2].split(",").collect();
+    let names: Vec<&str> = structured_data[0].split(',').collect();
+    let commands: Vec<&str> = structured_data[2].split(',').collect();
 
     //follow rules
 
@@ -37,7 +37,7 @@ fn main() {
             .expect("Unable to convert to digit");
 
         //match left or right commands, ensure we don't go over or under
-        match steps.chars().nth(0).expect("Unable to get instruction") {
+        match steps.chars().next().expect("Unable to get instruction") {
             'R' => {
                 if chosen_name + num_steps >= max_names {
                     chosen_name = max_names - 1
