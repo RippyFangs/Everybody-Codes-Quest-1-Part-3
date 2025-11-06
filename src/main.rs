@@ -1,5 +1,4 @@
-use core::num;
-use std::{fs::read_to_string, mem::swap};
+use std::fs::read_to_string;
 
 fn main() {
     //ingest data in a raw form
